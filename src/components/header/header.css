@@ -1,0 +1,40 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.header-nav {
+    margin: 20px;
+    width: 152px;
+    height: 40px;
+    display: block;
+
+    
+    border-radius: 30px;
+    text-decoration: none;
+
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #F7F7F7;
+}
+
+.nav-calc {
+    background: #CE9912;
+}
+
+.nav-text {
+    background: #FF4A4A;
+}
