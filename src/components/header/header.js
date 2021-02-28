@@ -1,8 +1,9 @@
 import React from 'react';
 import './header.css';
 import {Link} from 'react-router-dom';
+// import {APP_ROUTES} from '../../routes/AppRouter';
 
-function Header () {
+export default function Header () {
     return (
       <div className="header">
           <ul>
@@ -16,13 +17,13 @@ function Header () {
             <li>
               <Link 
                 className="header-nav nav-text"
-                to="/textpage">
-                Текст
+                to={{
+                  pathname: '/text',
+                  state: {id: 'id', date: new Date()}
+                }}>Текст
               </Link>
             </li>
           </ul>
       </div>
     );
-  }
-
-export default Header;
+  };

@@ -39,6 +39,10 @@
     border-radius: 30px;
 }
 
+.calcAmount {
+    color: #000000;
+}
+
 .calcBtn {
     width: 140px;
     height: 40px;   

@@ -1,7 +1,7 @@
 import React from 'react';
 import './textPage.css';
 
-function TextPage () {
+export default function TextPage () {
     return (
       <div className="text-page">
           <h2 className="text-title">Текстовая страница</h2>
@@ -14,6 +14,4 @@ function TextPage () {
 
       </div>
     );
-  }
-
-export default TextPage;
+  };
