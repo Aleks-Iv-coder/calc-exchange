@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {clearCurrency, getCurrencyRequest} from '../../store/actions';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 
-import spinner from '../../services/spinner';
+import Spinner from '../../services/spinner';
 import './calculator.css';
 
 export default function Calculator () {
@@ -32,7 +32,7 @@ export default function Calculator () {
         setAmount();
       }
     };
-
+ 
     const calculation = currency === undefined || amount === undefined ? null :
     (
         <span className="calcAmount">
@@ -41,9 +41,12 @@ export default function Calculator () {
             <strong> {(amount / currency).toFixed(2)}$</strong>
         </span>
     );
+
+    // const spinner = loading ? <Spinner /> : null;
  
     return (
       <div className="calculator">
+        {loading ? <Spinner /> : null}
         <h2 className="calcTitel">Калькулятор</h2>
 
         <Formik
