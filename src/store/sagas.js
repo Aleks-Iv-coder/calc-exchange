@@ -13,7 +13,6 @@ export function* watchCurrency() {
 export function* requestGetCurrency() {
     try {
         const data = yield call(getCurrency);
-        console.log(data);
         const usdCurrency = data.find((item) => item.ccy === 'USD');
 
         yield put(getCurrencySuccess( usdCurrency && usdCurrency.sale ? usdCurrency.sale : undefined));
@@ -22,19 +21,9 @@ export function* requestGetCurrency() {
     }
 }
 
-function getRateCurrency () {
-        currencyRate.getCurrenceRate()
-        .then((rec) => {
-            // const found = rec.find((item) => item.ccy ==='USD')
-            console.log(rec);
-            return (rec);
-        })
-};
-
 export  async function getCurrency() {
     return await (currencyRate.getCurrenceRate()
         .then((rec) => {
-            console.log(rec);
             return (rec);
         })
     )

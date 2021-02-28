@@ -4,12 +4,14 @@ import {clearCurrency, getCurrencyRequest} from '../../store/actions';
 import {Formik} from 'formik';
 import * as yup from 'yup';
 
+import spinner from '../../services/spinner';
 import './calculator.css';
 
 export default function Calculator () {
     const [amount, setAmount] = useState();
 
     const currency = useSelector((state) => state.currency);
+    const loading = useSelector((state) => state.loading);
     const dispatch = useDispatch();
 
     const validationsSchema = yup.object().shape({
