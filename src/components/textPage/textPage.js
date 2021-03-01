@@ -1,6 +1,6 @@
 import React from 'react';
 import {useLocation } from 'react-router-dom';
-import './textPage.css';
+import './textPage.scss';
 
 export function TextPage (props) {
     const location = useLocation();

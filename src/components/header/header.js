@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {APP_ROUTES} from '../../routes/AppRouter';
-import './header.css';
+import './header.scss';
 
 export function Header () {
     return (

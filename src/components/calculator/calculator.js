@@ -4,7 +4,7 @@ import {Formik} from 'formik';
 import {object, number} from 'yup';
 import {clearCurrency, getCurrencyRequest} from '../../store/actions';
 import {Spinner} from '../spinner/spinner';
-import './calculator.css';
+import './calculator.scss';
 
 export function Calculator () {
     const [amount, setAmount] = useState();
