@@ -1,5 +1,11 @@
+// import {routerReducer} from 'react-router-redux';
 import {GET_CURRENCY_REQUEST, GET_CURRENCY_SUCCESS, GET_CURRENCY_FAILURE, CLEAR_CURRENCY} from './actions';
+
 export const initialState = {};
+
+// export const routerReduserRedax = {
+//     routing: routerReducer,
+// };
 
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -21,5 +27,5 @@ export const rootReducer = (state = initialState, action) => {
                 };
         default: 
             return state;
-    }
-}
+    };
+};

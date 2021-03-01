@@ -8,16 +8,18 @@
     display: flex;
     align-items: center;
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
 .header-nav {
-    margin: 20px;
-    width: 152px;
-    height: 40px;
+    margin-top: 28px;
+    margin-bottom: 166px;
     display: block;
+    width: 152px;
+    /* height: 40px; */
 
-    
+
     border-radius: 30px;
     text-decoration: none;
 
@@ -33,8 +35,10 @@
 
 .nav-calc {
     background: #CE9912;
+    margin-right: 36px;
 }
 
 .nav-text {
     background: #FF4A4A;
+    margin-right: 39px;
 }

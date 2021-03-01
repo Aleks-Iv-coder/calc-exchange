@@ -41,8 +41,6 @@ export default function Calculator () {
             <strong> {(amount / currency).toFixed(2)}$</strong>
         </span>
     );
-
-    // const spinner = loading ? <Spinner /> : null;
  
     return (
       <div className="calculator">
@@ -71,14 +69,14 @@ export default function Calculator () {
             <form onSubmit={handleSubmit} className="form">
                 <input 
                     className="calcInput"
-                    type="number"
+                    type="text"
                     name="userAmount"
                     onChange={(e) => {handleChange(e); clearAmount()}}
                     onBlur={handleBlur}
                     value={values.userAmount || ''}
                     placeholder='Сумма, грн'>
                 </input>
-                {touched.userAmount && errors.userAmount ? <p className="error">{errors.userAmount}</p> : null}
+                {touched.userAmount && errors.userAmount ? <span className="error">{errors.userAmount}</span> : null}
                 {calculation}
                 <button 
                     className="calcBtn"

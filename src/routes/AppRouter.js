@@ -14,11 +14,19 @@ export const AppRouter = () => {
         <Router>
             <div className="App">
                 <Header />
-                <Switch>
-                    <Redirect exact from='/' to={APP_ROUTES.CALCULATOR}/>
-                    <Route path={APP_ROUTES.CALCULATOR} component={Calculator}/>
-                    <Route path={APP_ROUTES.TEXT} component={TextPage} />
-                </Switch>
+                <div className="container">
+                    <Switch>
+                        <Redirect exact from='/' to={APP_ROUTES.CALCULATOR}/>
+                        <Route path={APP_ROUTES.CALCULATOR} component={Calculator}/>
+                        <Route path={APP_ROUTES.TEXT} render={
+                            ({location}) => {
+                                const {state} = location;
+                                return <TextPage  id={state.id} date={state.date}/>
+                            }
+                        } />
+                    </Switch>
+                </div>
+                
             </div>
         </Router>
     )

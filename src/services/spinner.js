@@ -5,8 +5,8 @@ import './spinner.css';
 export default function  spinner () {
     return (
             <div className="spiner-content">
-                <div className="loadingio-spinner-double-ring-kr3lemgvfr9">
-                    <div className="ldio-wgsw9xd8g39">
+                <div className="loadingio-spinner-double-ring-5irekdubkf9">
+                    <div className="ldio-8y37tjyxhkt">
                         <div></div>
                         <div></div>
                         <div><div></div></div>
