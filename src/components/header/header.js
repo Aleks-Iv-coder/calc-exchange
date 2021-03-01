@@ -1,22 +1,22 @@
 import React from 'react';
-import './header.css';
 import {Link} from 'react-router-dom';
 import {APP_ROUTES} from '../../routes/AppRouter';
+import './header.css';
 
-export default function Header () {
+export function Header () {
     return (
-      <div className="header">
+      <div className='header'>
           <ul>
-            <li >
+            <li>
               <Link 
-                className="header-nav nav-calc" 
+                className='header-nav nav-calc'
                 to={APP_ROUTES.CALCULATOR}>
                 Калькулятор
               </Link>
             </li>
             <li>
               <Link 
-                className="header-nav nav-text"
+                className='header-nav nav-text'
                 to={{
                   pathname: APP_ROUTES.TEXT,
                   state: {id: 'My params', date: new Date()}

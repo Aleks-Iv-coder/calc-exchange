@@ -1,10 +1,9 @@
-export default class CurrencyService {
+export class CurrencyService {
 
     constructor() {
         this._apiBase = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5'
     }
     
-
     async getCurrenceRate() {
         const res = await fetch(`${this._apiBase}`);
     

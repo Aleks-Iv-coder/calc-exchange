@@ -2,12 +2,8 @@
   display: flex;
   min-height: 100vh;
   padding-bottom: 231px;
-
   background-color: #093843;
   color: white;
   flex-direction: column;
 }
 
-/* .container {
-  position: absolute;
-} */

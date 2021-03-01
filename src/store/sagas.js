@@ -1,7 +1,7 @@
 import createSagaMiddleware from 'redux-saga';
 import { all, takeLatest, call, put, } from 'redux-saga/effects';
 import { getCurrencySuccess, getCurrencyFailure, GET_CURRENCY_REQUEST, } from './actions';
-import CurrencyService from '../services/services';
+import {CurrencyService} from '../service/service';
 
 export const sagaMiddleware = createSagaMiddleware();
 export const currencyRate = new CurrencyService();
@@ -23,10 +23,7 @@ export function* requestGetCurrency() {
 
 export  async function getCurrency() {
     return await (currencyRate.getCurrenceRate()
-        .then((rec) => {
-            return (rec);
-        })
-    )
+        .then((rec) => rec))
 }
 
 export function* rootSaga() {
