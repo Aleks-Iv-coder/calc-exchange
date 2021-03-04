@@ -11,8 +11,7 @@ function* watchCurrency() {
 
 function* requestGetCurrency() {
     try {
-        const data = yield call(currencyService);
-        const usdCurrency = data.find((item) => item.ccy === 'USD');
+        const usdCurrency = yield call(currencyService);
         yield put(getCurrencySuccess( usdCurrency && usdCurrency.sale ? usdCurrency.sale : undefined));
     } catch (e) {
         yield put(getCurrencyFailure());
