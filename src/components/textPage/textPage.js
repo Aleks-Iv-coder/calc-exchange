@@ -2,7 +2,7 @@ import React from 'react';
 import {useLocation } from 'react-router-dom';
 import './textPage.scss';
 
-export function TextPage (props) {
+export function TextPage () {
     const location = useLocation();
     const {id, date} = location.state;
     return (

@@ -18,12 +18,13 @@ export function AppRouter () {
                     <Switch>
                         <Redirect exact from='/' to={APP_ROUTES.CALCULATOR}/>
                         <Route path={APP_ROUTES.CALCULATOR} component={Calculator}/>
-                        <Route path={APP_ROUTES.TEXT} render={
+                        <Route path={APP_ROUTES.TEXT} component={TextPage}/>
+                        {/* render={
                             ({location}) => {
                                 const {state} = location;
                                 return <TextPage  id={state.id} date={state.date}/>
                             }
-                        } />
+                        } />  */}
                     </Switch>
                 </div>
                 
