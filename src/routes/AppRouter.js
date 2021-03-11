@@ -6,7 +6,7 @@ import {TextPage} from '../components/textPage/textPage';
 
 
 export const APP_ROUTES = {
-    CALCULATOR: `/calculator`,
+    CALCULATOR: `/calculator/`,
     TEXT: `/text/`,
 }
 

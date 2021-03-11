@@ -21,7 +21,7 @@ export function Header () {
               <Link 
                 className='header-nav nav-text'
                 to={{
-                  pathname: `${APP_ROUTES.TEXT}${id}&${date}`
+                  pathname: `${APP_ROUTES.TEXT}id=${id}&date=${date}`
                 }}>Текст
               </Link>
             </li>
