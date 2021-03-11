@@ -1,10 +1,10 @@
 import React from 'react';
-import {useLocation } from 'react-router-dom';
+import {useRouteMatch } from 'react-router-dom';
 import './textPage.scss';
 
 export function TextPage () {
-    const location = useLocation();
-    const {id, date} = location.state;
+    const match = useRouteMatch();
+    const {id, date} = match.params;
 
     return (
       <div className='text-page'>
