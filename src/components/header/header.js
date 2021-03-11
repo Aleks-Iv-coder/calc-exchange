@@ -4,6 +4,9 @@ import {APP_ROUTES} from '../../routes/AppRouter';
 import './header.scss';
 
 export function Header () {
+    const id = 'anyId';
+    const date = new Date().toISOString().slice(0,10);
+
     return (
       <div className='header'>
           <ul>
@@ -18,8 +21,8 @@ export function Header () {
               <Link 
                 className='header-nav nav-text'
                 to={{
-                  pathname: APP_ROUTES.TEXT,
-                  state: {id: 'My params', date: new Date()}
+                  pathname: `${APP_ROUTES.TEXT}id=${id}&date=${date}`,
+                  state: {id: id, date: date}
                 }}>Текст
               </Link>
             </li>

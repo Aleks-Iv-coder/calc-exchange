@@ -6,25 +6,19 @@ import {TextPage} from '../components/textPage/textPage';
 
 export const APP_ROUTES = {
     CALCULATOR: `/calculator`,
-    TEXT: `/text`,
+    TEXT: `/text/`,
 }
 
 export function AppRouter () {
     return (
         <Router>
-            <div className='App'>
+            <div className='app'>
                 <Header />
                 <div className='container'>
                     <Switch>
                         <Redirect exact from='/' to={APP_ROUTES.CALCULATOR}/>
                         <Route path={APP_ROUTES.CALCULATOR} component={Calculator}/>
-                        <Route path={APP_ROUTES.TEXT} component={TextPage}/>
-                        {/* render={
-                            ({location}) => {
-                                const {state} = location;
-                                return <TextPage  id={state.id} date={state.date}/>
-                            }
-                        } />  */}
+                        <Route path={`${APP_ROUTES.TEXT}:id&:date`} component={TextPage}/>
                     </Switch>
                 </div>
                 
