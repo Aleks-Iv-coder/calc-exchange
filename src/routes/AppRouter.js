@@ -4,6 +4,7 @@ import {Header} from '../components/header/header';
 import {Calculator} from '../components/calculator/calculator';
 import {TextPage} from '../components/textPage/textPage';
 
+
 export const APP_ROUTES = {
     CALCULATOR: `/calculator`,
     TEXT: `/text/`,
