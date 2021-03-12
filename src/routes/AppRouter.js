@@ -7,7 +7,7 @@ import {TextPage} from '../components/textPage/textPage';
 
 export const APP_ROUTES = {
     CALCULATOR: `/calculator/`,
-    TEXT: `/text/`,
+    TEXT: `/text`,
 }
 
 export function AppRouter () {
@@ -19,10 +19,9 @@ export function AppRouter () {
                     <Switch>
                         <Redirect exact from='/' to={APP_ROUTES.CALCULATOR}/>
                         <Route path={APP_ROUTES.CALCULATOR} component={Calculator}/>
-                        <Route path={`${APP_ROUTES.TEXT}:id&:date`} component={TextPage}/>
+                        <Route exact path={`${APP_ROUTES.TEXT}:id?`} component={TextPage}/>
                     </Switch>
                 </div>
-                
             </div>
         </Router>
     )
